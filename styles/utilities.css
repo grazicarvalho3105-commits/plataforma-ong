@@ -1,0 +1,39 @@
+.navbar {
+  background-color: var(--color-primary);
+  color: white;
+  padding: var(--space-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  display: none;
+}
+
+#menu-list {
+  display: flex;
+  gap: var(--space-3);
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  #menu-list {
+    display: none;
+    flex-direction: column;
+    background: var(--color-primary-dark);
+    padding: var(--space-2);
+  }
+
+  #menu-list.active {
+    display: flex;
+  }
+}

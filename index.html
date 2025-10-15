@@ -4,13 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ONG Vida Animal - Início</title>
-  <link rel="stylesheet" href="css/estilo.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/utilities.css">
+  <link rel="stylesheet" href="styles/responsive.css">
 </head>
+
 <body>
   <header>
-    <h1>ONG Vida Animal</h1>
-    <nav>
-      <ul>
+    <nav class="navbar">
+      <div class="logo">ONG Vida Animal</div>
+      <button class="menu-toggle" id="menu-btn">☰</button>
+      <ul id="menu-list">
         <li><a href="index.html">Início</a></li>
         <li><a href="projetos.html">Projetos</a></li>
         <li><a href="cadastro.html">Cadastro</a></li>
@@ -36,7 +44,15 @@
   <footer>
     <p>&copy; 2025 ONG Vida Animal. Todos os direitos reservados.</p>
   </footer>
+
+  <!-- Script deve ficar no final -->
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const menuList = document.getElementById("menu-list");
+
+    menuBtn.addEventListener("click", () => {
+      menuList.classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
-
-
