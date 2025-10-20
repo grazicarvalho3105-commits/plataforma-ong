@@ -1,0 +1,53 @@
+:root {
+  /* 🎨 Paleta de cores */
+  --color-primary: #8c3a69;
+  --color-primary-dark: #6d2952;
+  --color-secondary: #f5b700;
+  --color-secondary-dark: #c48e00;
+  --color-surface: #ffffff;
+  --color-background: #f7f7f7;
+  --color-muted: #ccc;
+  --color-text: #333333;
+  --color-success: #2ecc71;
+  --color-error: #e74c3c;
+
+  /* 🧭 Tipografia */
+  --font-family: 'Poppins', sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 28px;
+
+  /* 📏 Espaçamento modular */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+}
+
+/* ⚙️ Estilos básicos */
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-2);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}

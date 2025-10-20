@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONG Vida Animal - Início</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/utilities.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">ONG Vida Animal</div>
+      <button class="menu-toggle" id="menu-btn">☰</button>
+      <ul id="menu-list">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Quem Somos</h2>
+      <img src="img/banner.jpeg" alt="Cuidando dos animais">
+      <p>A ONG Vida Animal atua no resgate, cuidado e adoção de animais abandonados, promovendo conscientização e respeito à vida.</p>
+    </section>
+
+    <section>
+      <h2>Contato</h2>
+      <p><strong>Telefone:</strong> (14) 99999-1234</p>
+      <p><strong>Email:</strong> contato@vidaanimal.org</p>
+      <p><strong>Endereço:</strong> Rua das Flores, 100 - Tupã/SP</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ONG Vida Animal. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Script deve ficar no final -->
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const menuList = document.getElementById("menu-list");
+
+  menuBtn.addEventListener("click", () => {
+    menuList.classList.toggle("active");
+  });
+</script>
+
+<!-- Aqui os scripts externos, fora do <script> acima -->
+<script src="scripts/templates.js"></script>
+<script src="scripts/formValidation.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+</html>
