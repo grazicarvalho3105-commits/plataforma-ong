@@ -38,3 +38,35 @@ section {
   padding: var(--space-3);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
+/* ==== BOTÃO DE ALTO CONTRASTE ==== */
+#contrast-toggle {
+  background-color: #fff;
+  color: #6a1b47;
+  border: 2px solid #6a1b47;
+  border-radius: 8px;
+  padding: 6px 12px;
+  margin-left: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+#contrast-toggle:hover,
+#contrast-toggle:focus {
+  background-color: #6a1b47;
+  color: #fff;
+  outline: none;
+}
+body.high-contrast {
+  background-color: #000;
+  color: #fff;
+}
+
+body.high-contrast a {
+  color: #ff0;
+}
+
+body.high-contrast header,
+body.high-contrast footer {
+  background-color: #222;
+}

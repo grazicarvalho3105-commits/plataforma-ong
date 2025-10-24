@@ -3,65 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro - ONG Vida Animal</title>
-  <link rel="stylesheet" href="css/estilo.css">
-  <script defer src="js/scripts.js"></script>
+  <title>ONG Vida Animal — Cadastro de Voluntários</title>
+
+  <!-- CSS modular -->
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/utilities.css">
+  <link rel="stylesheet" href="styles/responsive.css">
 </head>
+
 <body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
   <header>
-    <h1>Cadastro de Voluntário</h1>
-    <nav>
-      <ul>
+    <nav class="navbar" role="navigation" aria-label="Menu principal">
+      <h1 class="logo" aria-label="ONG Vida Animal">ONG Vida Animal</h1>
+
+      <button class="menu-toggle" id="menu-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-list">☰</button>
+
+      <ul id="menu-list">
         <li><a href="index.html">Início</a></li>
         <li><a href="projetos.html">Projetos</a></li>
-        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
       </ul>
+
+      <button id="contrast-toggle" aria-label="Ativar ou desativar modo de alto contraste">Alto Contraste</button>
     </nav>
   </header>
 
-  <main>
-    <form id="form-cadastro">
-      <fieldset>
-        <legend>Dados Pessoais</legend>
+  <main id="conteudo-principal">
+    <section>
+      <h2>Seja um Voluntário ❤️</h2>
+      <p>
+    Acreditamos que cada gesto conta! Cadastre-se abaixo e descubra como você pode fazer parte dessa corrente do bem.
+      </p>
 
-        <label for="nome">Nome Completo:</label>
-        <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+      <form id="formCadastro" aria-label="Formulário de cadastro de voluntário" novalidate>
+        <fieldset>
+          <legend>Informações Pessoais</legend>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
+          <label for="nome">Nome completo:</label>
+          <input type="text" id="nome" name="nome" required aria-required="true" placeholder="Digite seu nome completo">
 
-        <label for="cpf">CPF:</label>
-        <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00" maxlength="14">
+          <label for="cpf">CPF:</label>
+          <input type="text" id="cpf" name="cpf" maxlength="14" required aria-required="true" placeholder="000.000.000-00">
 
-        <label for="telefone">Telefone:</label>
-        <input type="tel" id="telefone" name="telefone" required placeholder="(00) 00000-0000" maxlength="15">
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" name="telefone" maxlength="15" required aria-required="true" placeholder="(00) 00000-0000">
 
-        <label for="nascimento">Data de Nascimento:</label>
-        <input type="date" id="nascimento" name="nascimento" required>
-      </fieldset>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required aria-required="true" placeholder="exemplo@email.com">
 
-      <fieldset>
-        <legend>Endereço</legend>
+          <label for="cep">CEP:</label>
+          <input type="text" id="cep" name="cep" maxlength="9" placeholder="00000-000">
 
-        <label for="endereco">Endereço:</label>
-        <input type="text" id="endereco" name="endereco" required placeholder="Rua, número, complemento">
+          <label for="endereco">Endereço:</label>
+          <input type="text" id="endereco" name="endereco" placeholder="Rua, número, bairro">
 
-        <label for="cep">CEP:</label>
-        <input type="text" id="cep" name="cep" required placeholder="00000-000" maxlength="9">
+          <label for="cidade">Cidade:</label>
+          <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade">
 
-        <label for="cidade">Cidade:</label>
-        <input type="text" id="cidade" name="cidade" required>
+          <label for="estado">Estado:</label>
+          <input type="text" id="estado" name="estado" maxlength="2" placeholder="UF">
 
-        <label for="estado">Estado:</label>
-        <input type="text" id="estado" name="estado" maxlength="2" required placeholder="UF">
-      </fieldset>
+          <label for="tipo-ajuda">Como você gostaria de ajudar?</label>
+          <select id="tipo-ajuda" name="tipo-ajuda" aria-label="Tipo de ajuda">
+            <option value="">Selecione uma opção</option>
+            <option value="doacao">Doação</option>
+            <option value="voluntariado">Trabalho Voluntário</option>
+            <option value="apadrinhamento">Apadrinhamento</option>
+          </select>
 
-      <button type="submit">Enviar Cadastro</button>
-    </form>
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte um pouco sobre você ou sua disponibilidade..."></textarea>
+
+          <button type="submit" id="btnEnviar" aria-label="Enviar formulário de cadastro">Enviar Cadastro</button>
+        </fieldset>
+      </form>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2025 ONG Vida Animal. Todos os direitos reservados.</p>
   </footer>
+
+  <!-- Scripts -->
+  <script src="scripts/formValidation.js"></script>
+  <script src="scripts/templates.js"></script>
+  <script src="scripts/main.js"></script>
 </body>
 </html>

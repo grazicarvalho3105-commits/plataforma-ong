@@ -3,46 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ONG Vida Animal - Projetos</title>
-  <link rel="stylesheet" href="css/estilo.css">
+  <title>ONG Vida Animal — Projetos e Ações Sociais</title>
+
+  <!-- CSS modular -->
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/utilities.css">
+  <link rel="stylesheet" href="styles/responsive.css">
 </head>
+
 <body>
+  <!-- Link de pular para o conteúdo principal -->
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
   <header>
-    <h1>Projetos e Ações Sociais</h1>
-    <nav>
-      <ul>
+    <nav class="navbar" role="navigation" aria-label="Menu principal">
+      <h1 class="logo" aria-label="ONG Vida Animal">ONG Vida Animal</h1>
+
+      <!-- Botão do menu acessível -->
+      <button 
+        class="menu-toggle" 
+        id="menu-btn" 
+        aria-label="Abrir menu de navegação"
+        aria-expanded="false"
+        aria-controls="menu-list"
+      >
+        ☰
+      </button>
+
+      <!-- Menu principal -->
+      <ul id="menu-list">
         <li><a href="index.html">Início</a></li>
-        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="projetos.html" aria-current="page">Projetos</a></li>
         <li><a href="cadastro.html">Cadastro</a></li>
       </ul>
+
+      <!-- Botão de alto contraste -->
+      <button id="contrast-toggle" aria-label="Ativar ou desativar modo de alto contraste">
+        Alto Contraste
+      </button>
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Projetos Atuais</h2>
-      <article>
-        <img src="img/projeto1.jpeg" alt="Mutirão de resgate animal">
-        <h3>Mutirão de Resgate</h3>
-        <p>Equipes voluntárias atuam no resgate de animais em situação de abandono.</p>
-      </article>
+  <main id="conteudo-principal">
+  <section>
+  <h2>Nossos Projetos</h2>
 
-      <article>
-        <img src="img/projeto2.jpeg" alt="Campanha de adoção">
-        <h3>Campanha de Adoção</h3>
-        <p>Promovemos eventos mensais de adoção responsável em várias cidades.</p>
-      </article>
-    </section>
+  <article class="card">
+    <img src="/img/projeto1.jpeg" alt="Voluntários realizando mutirão de resgate animal">
+    <h3>Mutirão de Resgate</h3>
+    <p>
+      Nossos voluntários atuam diariamente no resgate de animais em situação de abandono, garantindo abrigo, alimento e cuidado veterinário.
+    </p>
+  </article>
+
+  <article class="card">
+    <img src="/img/projeto2.jpeg" alt="Evento de adoção com famílias e animais">
+    <h3>Campanha de Adoção</h3>
+    <p>
+      Organizamos feiras mensais de adoção responsável, conectando animais resgatados a famílias amorosas e conscientes.
+    </p>
+  </article>
+
+  <article class="card">
+    <img src="/img/projeto3.jpeg" alt="Equipe de veterinários e voluntários cuidando de cães">
+    <h3>Clínica Solidária</h3>
+    <p>
+      Parcerias com clínicas e profissionais permitem oferecer castrações e tratamentos gratuitos para comunidades carentes.
+    </p>
+  </article>
+</section>
+
 
     <section>
       <h2>Como Ajudar</h2>
-      <p>Você pode contribuir com doações, trabalho voluntário ou apadrinhando um animal.</p>
+      <p>Você pode contribuir com doações, trabalho voluntário ou apadrinhando um animal. Toda ajuda é bem-vinda!</p>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 ONG Vida Animal. Todos os direitos reservados.</p>
   </footer>
+
+  <!-- Scripts -->
+  <script src="scripts/templates.js"></script>
+  <script src="scripts/formValidation.js"></script>
+  <script src="scripts/main.js"></script>
 </body>
 </html>
-

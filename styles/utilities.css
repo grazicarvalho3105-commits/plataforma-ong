@@ -37,3 +37,18 @@
     display: flex;
   }
 }
+
+/* ===== MODO DE ALTO CONTRASTE ===== */
+body.high-contrast {
+  background-color: #000;
+  color: #fff;
+}
+
+body.high-contrast a {
+  color: #ff0;
+}
+
+body.high-contrast header,
+body.high-contrast footer {
+  background-color: #222;
+}

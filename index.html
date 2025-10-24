@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ONG Vida Animal - Início</title>
+  <title>ONG Vida Animal — Adoção e Proteção de Animais</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles/base.css">
@@ -14,45 +14,68 @@
 </head>
 
 <body>
+  <!-- Link de pular para o conteúdo principal -->
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
   <header>
-    <nav class="navbar">
-      <div class="logo">ONG Vida Animal</div>
-      <button class="menu-toggle" id="menu-btn">☰</button>
+    <nav class="navbar" role="navigation" aria-label="Menu principal">
+      <h1 class="logo" aria-label="ONG Vida Animal">ONG Vida Animal</h1>
+
+      <!-- Botão do menu acessível -->
+      <button 
+        class="menu-toggle" 
+        id="menu-btn" 
+        aria-label="Abrir menu de navegação"
+        aria-expanded="false"
+        aria-controls="menu-list"
+      >
+        ☰
+      </button>
+
+      <!-- Menu principal -->
       <ul id="menu-list">
         <li><a href="index.html">Início</a></li>
         <li><a href="projetos.html">Projetos</a></li>
         <li><a href="cadastro.html">Cadastro</a></li>
       </ul>
+
+      <!-- Botão de alto contraste -->
+      <button id="contrast-toggle" aria-label="Ativar ou desativar modo de alto contraste">
+        Alto Contraste
+      </button>
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Quem Somos</h2>
-      <img src="img/banner.jpeg" alt="Cuidando dos animais">
-      <p>A ONG Vida Animal atua no resgate, cuidado e adoção de animais abandonados, promovendo conscientização e respeito à vida.</p>
-    </section>
+  <main id="conteudo-principal">
+  <section>
+  <h2>Transformando vidas, uma patinha de cada vez 🐶🐱</h2>
+  <img src="/img/banner.jpeg" alt="Equipe da ONG Vida Animal cuidando de cães e gatos resgatados">
+  <p>
+    A <strong>ONG Vida Animal</strong> é um abrigo de amor e esperança. Atuamos no <strong>resgate, cuidado e adoção</strong> de animais abandonados,
+    promovendo conscientização sobre o respeito à vida e o bem-estar animal.
+  </p>
+  <p>
+    Junte-se a nós nessa causa! Com seu apoio, conseguimos levar dignidade, saúde e carinho para centenas de animais todos os anos.
+  </p>
+</section>
 
-    <section>
-      <h2>Contato</h2>
-      <p><strong>Telefone:</strong> (14) 99999-1234</p>
-      <p><strong>Email:</strong> contato@vidaanimal.org</p>
-      <p><strong>Endereço:</strong> Rua das Flores, 100 - Tupã/SP</p>
-    </section>
+<section>
+  <h2>Entre em Contato</h2>
+  <p><strong>Telefone:</strong> (14) 99999-1234</p>
+  <p><strong>Email:</strong> contato@vidaanimal.org</p>
+  <p><strong>Endereço:</strong> Rua das Flores, 100 – Tupã/SP</p>
+</section>
+
   </main>
 
   <footer>
     <p>&copy; 2025 ONG Vida Animal. Todos os direitos reservados.</p>
   </footer>
 
-  <!-- Script deve ficar no final -->
-  <script>
-    const menuBtn = document.getElementById("menu-btn");
-    const menuList = document.getElementById("menu-list");
-
-    menuBtn.addEventListener("click", () => {
-      menuList.classList.toggle("active");
-    });
-  </script>
+  <!-- Scripts -->
+ <script src="scripts/formValidation.js"></script>
+<script src="scripts/templates.js"></script>
+<script src="scripts/main.js"></script>
 </body>
 </html>
+
