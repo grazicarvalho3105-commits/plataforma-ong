@@ -39,5 +39,6 @@ O projeto está publicado via **GitHub Pages**:
 ---
 
 ## 🧠 Autor
-**Grazi Carvalho**  
-Projeto desenvolvido para fins acadêmicos – Curso de Desenvolvimento Front-End 💻
+**Graziella Carvalho**  
+Projeto desenvolvido para fins acadêmicos 💻
+
