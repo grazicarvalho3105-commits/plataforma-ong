@@ -41,4 +41,3 @@ O projeto está publicado via **GitHub Pages**:
 ## 🧠 Autor
 **Grazi Carvalho**  
 Projeto desenvolvido para fins acadêmicos 💻
-
